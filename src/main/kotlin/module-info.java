@@ -1,4 +1,9 @@
 module uz.ifood.app {
+    requires MaterialFX;
+    requires VirtualizedFX;
+
+    requires jdk.localedata;
+
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.graphics;

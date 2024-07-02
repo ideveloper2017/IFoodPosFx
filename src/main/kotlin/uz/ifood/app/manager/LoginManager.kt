@@ -32,7 +32,7 @@ class LoginManager(private val scene: Scene) {
     fun showLoginScreen() {
         try {
 
-            val loader = FXMLLoader(IFoodApplication::class.java.getResource("login.fxml")
+            val loader = FXMLLoader(IFoodApplication::class.java.getResource("fxml/login.fxml")
             )
             scene.root = loader.load() as Parent
             val controller: LoginController =loader.getController<LoginController>()
@@ -45,7 +45,7 @@ class LoginManager(private val scene: Scene) {
     private fun showMainView(sessionID: String) {
         try {
             val loader = FXMLLoader(
-                IFoodApplication::class.java.getResource("mainview.fxml")
+                IFoodApplication::class.java.getResource("fxml/mainview.fxml")
             )
             scene.root = loader.load<Any>() as Parent
             val controller: MainView =

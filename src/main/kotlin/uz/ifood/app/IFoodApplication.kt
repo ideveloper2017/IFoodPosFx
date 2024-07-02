@@ -1,6 +1,9 @@
 
 package uz.ifood.app
 
+import io.github.palexdev.materialfx.theming.JavaFXThemes
+import io.github.palexdev.materialfx.theming.MaterialFXStylesheets
+import io.github.palexdev.materialfx.theming.UserAgentBuilder
 import javafx.application.Application
 import javafx.scene.Scene
 import javafx.scene.layout.StackPane
@@ -10,7 +13,14 @@ import uz.ifood.app.manager.LoginManager
 
 class IFoodApplication : Application() {
     override fun start(stage: Stage) {
-//        val fxmlLoader = FXMLLoader(IFoodApplication::class.java.getResource("login.fxml"))
+        UserAgentBuilder.builder()
+            .themes(JavaFXThemes.MODENA)
+            .themes(MaterialFXStylesheets.forAssemble(true))
+            .setDeploy(true)
+            .setResolveAssets(true)
+            .build()
+            .setGlobal();
+        //        val fxmlLoader = FXMLLoader(IFoodApplication::class.java.getResource("login.fxml"))
 //        val scene = Scene(fxmlLoader.load(), 320.0, 240.0)
 //        stage.title = "Hello!"
 //        stage.scene = scene
